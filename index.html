@@ -18,7 +18,12 @@
     <div class="container">
       <nav aria-label="Primary navigation">
         <a href="#home" class="logo" aria-label="Ara Jane Arong Home">AJA<span></span></a>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -94,10 +99,10 @@
             </ul>
           </article>
           <article class="education-item">
-            <div class="education-year">2023 - 2026</div>
-            <h4>College</h4>
+            <div class="education-year">2023 - 2024</div>
+            <h4>Bohol Island State University - Bilar Campus</h4>
             <ul class="education-points">
-              <li>Started college in 2023-2024 Ongoing through 2026-2027.</li>
+              <li>Started first year in 2023-2024 at BISU Bilar.</li>
               <li>Bachelor of Science in Computer Science.</li>
             </ul>
           </article>
@@ -279,6 +284,25 @@
       <p>&copy; 2026 Ara Jane Arong · Frontend Developer · All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 
 </body>
 
