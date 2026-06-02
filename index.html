@@ -18,12 +18,12 @@
     <div class="container">
       <nav aria-label="Primary navigation">
         <a href="#home" class="logo" aria-label="Ara Jane Arong Home">AJA<span></span></a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <button class="menu-btn hamburger" type="button" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul class="nav-links" id="nav-menu">
+        <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -45,7 +45,7 @@
     <!-- Hero -->
     <section id="home" aria-labelledby="home-heading">
       <div class="container">
-        <h1 id="home-heading">Hi, I'am Ara Jane T. Arong</h1>
+        <h1 id="home-heading">Hi, I'm Ara Jane T. Arong</h1>
         <p class="hero-desc">Frontend Developer. I build responsive, accessible, and clean web interfaces. Passionate
           about UI/UX, performance optimization, and delivering great user experiences.</p>
 
@@ -60,7 +60,7 @@
     <!-- About -->
     <section id="about" aria-labelledby="about-heading">
       <div class="container">
-        <h2 id="about-heading">Who I Am</h2>
+        <h2 id="about-heading"></h2>
         <h3 class="compact-heading">About Me</h3>
         <p>Hi, ako si Ara Jane Arong — frontend developer nga mahilig sa paghimo og limpyo, responsive, ug accessible
           nga web interfaces. Naka-experience ko sa HTML, CSS, JavaScript, ug React. Nagtrabaho ko sa mga projects sama
@@ -69,16 +69,16 @@
         <div class="info-grid" role="list" aria-label="Personal details">
           <div class="info-item" role="listitem">
             <div class="info-label">Location</div>
-            <div class="info-value"> San Francisco,Talibon, Bohol, Philippines</div>
+            <div class="info-value">San Francisco, Talibon, Bohol, Philippines</div>
           </div>
-        </div>
-        <div class="info-item" role="listitem">
-          <div class="info-label">Phone</div>
-          <div class="info-value">09103940890</div>
-        </div>
-        <div class="info-item" role="listitem">
-          <div class="info-label">Status</div>
-          <div class="info-value status">Open to Opportunities</div>
+          <div class="info-item" role="listitem">
+            <div class="info-label">Phone</div>
+            <div class="info-value">09103940890</div>
+          </div>
+          <div class="info-item" role="listitem">
+            <div class="info-label">Status</div>
+            <div class="info-value status">Open to Opportunities</div>
+          </div>
         </div>
       </div>
       <div class="education-section">
@@ -99,28 +99,27 @@
             </ul>
           </article>
           <article class="education-item">
-            <div class="education-year">2023 - 2024</div>
-            <h4>Bohol Island State University - Bilar Campus</h4>
+            <div class="education-year">2023 - 2026</div>
+            <h4>College</h4>
             <ul class="education-points">
-              <li>Started first year in 2023-2024 at BISU Bilar.</li>
+              <li>Currently studying college in the 2023-2026 academic track.</li>
               <li>Bachelor of Science in Computer Science.</li>
             </ul>
           </article>
         </div>
-      </div>
       </div>
     </section>
 
     <!-- Experience -->
     <section id="experience" aria-labelledby="experience-heading">
       <div class="container">
-        <h2 id="experience-heading">Career</h2>
-        <h3>Work Experience</h3>
+        <h2 id="experience-heading">Work Experience</h2>
+        <h3></h3>
         <div class="card-grid" role="list">
           <article class="card" role="listitem">
-            <div class="card-meta"><span class="badge">2023</span><span class="badge">School Project</span></div>
+            <div class="card-meta"><span class="badge"></span><span class="badge">SCHOOL EXPERIENCE</span></div>
             <h3>Frontend Developer</h3>
-            <p class="compact-meta">2023 – Present</p>
+            <p class="compact-meta"> Present</p>
             <p>Built a PhP-Based Library and Real Estate Management system as a school project, applying basic database
               and web development skills..</p>
             <ul class="experience-points" aria-label="Frontend Developer responsibilities">
@@ -131,9 +130,10 @@
             </ul>
           </article>
           <article class="card" role="listitem">
-            <div class="card-meta"><span class="badge">2021</span><span class="badge">OJT Experience</span></div>
+            <div class="card-meta"><span class="badge"></span><span class="badge">STUDENT INTERN IT DEPARTMENT
+                EXPERIENCE</span></div>
             <h3>Junior Web Developer</h3>
-            <p class="compact-meta">2026 – 2027</p>
+            <p class="compact-meta"></p>
             <p>Developed and maintained frontend features. Worked on portfolio sites and internal tools using HTML, CSS,
               and JavaScript.</p>
             <ul class="experience-points" aria-label="Junior Web Developer responsibilities">
@@ -149,28 +149,84 @@
     <!-- Skills -->
     <section id="skills" aria-labelledby="skills-heading">
       <div class="container">
-        <h2 id="skills-heading"> </h2>
-        <h3>My Skills</h3>
+        <h2 id="skills-heading">Skills</h2>
+        <h3>My Tech Stack</h3>
+        <p class="skills-intro">I create web applications with HTML, CSS, and JavaScript, store data using MySQL, and
+          manage my workflow with VS Code, GitHub Desktop, and GitHub.</p>
         <ul class="skills-list" aria-label="Technical skills">
           <li class="skill-item">Willingness to learn new things</li>
           <li class="skill-item">Hardworking and reliable</li>
           <li class="skill-item">Works with dedication and discipline</li>
           <li class="skill-item">Good communication skills</li>
           <li class="skill-item">Teamwork and collaboration</li>
-          <li class="skill-item skill-tech-group" aria-label="Core web technologies">
-            <span class="skill-tech-pill">HTML</span>
-            <span class="skill-tech-pill">CSS</span>
-            <span class="skill-tech-pill">JavaScript</span>
-          </li>
         </ul>
+        <div class="skills-grid">
+          <article class="skill-box">
+            <h3>Frontend</h3>
+            <div class="skill-icons-row">
+              <div class="skill-icon html-icon">
+                <span>HTML</span>
+              </div>
+              <div class="skill-icon css-icon">
+                <span>CSS</span>
+              </div>
+              <div class="skill-icon js-icon">
+                <span>JavaScript</span>
+              </div>
+            </div>
+            <p class="skill-description">Modern responsive page structure, styling, and interactivity using HTML, CSS,
+              and JavaScript.</p>
+          </article>
+          <article class="skill-box">
+            <h3>Database</h3>
+            <div class="skill-icons-row">
+              <div class="skill-icon mysql-icon">
+                <span>MySQL</span>
+              </div>
+            </div>
+            <p class="skill-description">Database design and query management for storing data cleanly in web apps.</p>
+          </article>
+          <article class="skill-box">
+            <h3>Tools</h3>
+            <div class="skill-tools">
+              <span class="tool-pill github-desktop-pill">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v13A2.5 2.5 0 0 1 17.5 21h-11A2.5 2.5 0 0 1 4 18.5v-13Z"
+                    opacity=".18" />
+                  <path d="M7 7h10v2H7V7Zm0 4h10v2H7v-2Zm0 4h6v2H7v-2Z" fill="currentColor" />
+                </svg>
+                GitHub Desktop
+              </span>
+              <span class="tool-pill vscode-pill">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4.5 3.6 13.9 9.3l-4.5 3.4L4.5 8.2v-4.6Z" opacity=".18" />
+                  <path
+                    d="M5.1 4.2 12.4 8.8v6.4L5.1 19.2V4.2Zm15.8 7.6L16.7 8.5l-3.4 2.6 4.4 3.4-2.7 2.1 3.4 2.5 3.1-2.3V11.8Z"
+                    fill="currentColor" />
+                </svg>
+                VS Code
+              </span>
+              <span class="tool-pill github-pill">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.55 2.36 1.1 2.93.84.09-.65.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03A9.57 9.57 0 0 1 12 6.8c.85.004 1.71.11 2.51.32 1.9-1.3 2.74-1.03 2.74-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.68 0 3.85-2.34 4.7-4.58 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10Z"
+                    fill="currentColor" />
+                </svg>
+                GitHub
+              </span>
+            </div>
+            <p class="skill-description">Workflow tools for version control, code editing, and collaboration.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Certificates -->
     <section id="certificates" aria-labelledby="certificates-heading">
       <div class="container">
-        <h2 id="certificates-heading"></h2>
-        <h3>My Certificates</h3>
+        <h2 id="certificates-heading">Certificates</h2>
+        <h3></h3>
         <div class="card-grid" role="list">
           <article class="card" role="listitem">
             <div class="certificate-image">
@@ -184,8 +240,7 @@
           <!-- Certificate 2: C++ Algorithms -->
           <article class="card" role="listitem">
             <div class="certificate-image">
-              <img src="image/certificate-cpp-algo.jpg.jpg"
-                alt="C++ Algorithms and Complexity Certificate from CodeChum">
+              <img src="image/certificate-cpp-algo.jpg" alt="C++ Algorithms and Complexity Certificate from CodeChum">
               <h3>C++ Algorithms and Complexity</h3>
               <p class="compact-meta">Score: 370 / 570</p>
               <p>Issued: May 30, 2026</p>
@@ -199,8 +254,9 @@
     <!-- Projects -->
     <section id="projects" aria-labelledby="projects-heading">
       <div class="container">
-        <h2 id="projects-heading">Work</h2>
-        <h3>Featured Projects</h3>
+        <h2 id="projects-heading">Work Featured Projects</h2>
+        <h3></h3>
+        <h3>"none pa"</h3>
         <div class="card-grid" role="list">
           <article class="card" role="listitem">
             <div class="card-meta"><span class="badge">Web App</span></div>
@@ -254,7 +310,7 @@
                 target="_blank" rel="noopener">LI</a>
             </div>
           </div>
-          <form action="#" method="POST" aria-label="Contact form">
+          <form id="contact-form" action="#" method="POST" aria-label="Contact form">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
@@ -285,25 +341,7 @@
     </div>
   </footer>
 
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', !isExpanded);
-    });
-
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
-
+  <script src="script.js" defer></script>
 </body>
 
 </html>

@@ -34,6 +34,8 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .skip-link {
@@ -294,8 +296,9 @@ p {
   max-width: 400px;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2);
-  border: 3px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
 }
 
 .hero-image {
@@ -541,6 +544,132 @@ p {
   gap: 0.85rem;
   margin-top: 1rem;
   padding-left: 0;
+}
+
+.skill-box {
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.88));
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  padding: 1.6rem;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 24px 48px rgba(59, 130, 246, 0.16);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.skills-intro {
+  max-width: 740px;
+  margin: 0.75rem auto 1.5rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+#skills>.container>h3 {
+  text-align: center;
+}
+
+.skill-box h3 {
+  color: #c7d2fe;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.skill-icons-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-icon {
+  min-width: 96px;
+  padding: 1rem;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.12);
+}
+
+.html-icon {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+}
+
+.css-icon {
+  background: linear-gradient(135deg, #2563eb, #93c5fd);
+}
+
+.js-icon {
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  color: #1f2937;
+}
+
+.mysql-icon {
+  background: linear-gradient(135deg, #22c55e, #14b8a6);
+}
+
+.skill-tools {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  margin-bottom: 1rem;
+}
+
+.tool-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.tool-pill svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.github-desktop-pill {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(96, 165, 250, 0.12));
+  border-color: rgba(59, 130, 246, 0.28);
+}
+
+.vscode-pill {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(14, 165, 233, 0.15));
+  border-color: rgba(56, 189, 248, 0.28);
+}
+
+.github-pill {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.skill-description {
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+  line-height: 1.7;
 }
 
 .skill-item {
