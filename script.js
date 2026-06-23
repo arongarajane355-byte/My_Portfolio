@@ -64,3 +64,73 @@ window.addEventListener('DOMContentLoaded', () => {
 
   revealTargets.forEach((el) => observer.observe(el));
 });
+
+  document.querySelectorAll('.project-image-row').forEach(row => {
+    row.addEventListener('click', () => {
+      // Gamit ang 'add' para dili na siya mag-collapse (mawala) inig click balik
+      row.classList.add('expanded');
+    });
+  });
+
+  document.querySelectorAll('.project-image-row').forEach(row => {
+    constimages = row.querySelectorAll('img');
+    let currentIndex = 0;
+
+    row.addEventListener('click', () => {
+      // Remove active from current
+      images[currentIndex].classList.remove('active');
+      
+      // Move to next image (loop back to start)
+      currentIndex = (currentIndex + 1) % images.length;
+      
+      // Add active to next image
+      images[currentIndex].classList.add('active');
+    });
+  });
+  
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // ===== VIEW MORE / SHOW LESS =====
+  document.querySelectorAll('.view-more-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const row = this.closest('.project-image-row');
+      row.classList.toggle('expanded');
+    });
+  });
+
+  // ===== LIGHTBOX =====
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+  // Open lightbox when clicking any image
+  document.querySelectorAll('.project-image-row img').forEach(img => {
+    img.addEventListener('click', function() {
+      lightboxImg.src = this.src;
+      lightboxImg.alt = this.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close lightbox
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  
+  // Close when clicking background
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Close with ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+});
