@@ -57,114 +57,143 @@
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <h2 id="about-heading"></h2>
-        <div class="hero-image-container">
-          <img src="image/jane_1.jpg" alt="Ara Jane Arong - Frontend Developer" class="hero-image">
-        </div>
-        <h3 class="compact-heading">About Me</h3>
-        <p>Hi, ako si Ara Jane Arong — frontend developer nga mahilig sa paghimo og limpyo, responsive, ug accessible
-          nga web interfaces. Naka-experience ko sa HTML, CSS, JavaScript, ug React. Nagtrabaho ko sa mga projects sama
-          sa portfolio sites, internal tools, ug asset management systems. Mahigugmaon ko sa pag-optimize sa performance
-          ug pagpaayo sa user experience. Open ko sa collaborations — kontaka ko pinaagi sa email o LinkedIn.</p>
-        <div class="info-grid" role="list" aria-label="Personal details">
-          <div class="info-item location-item" role="listitem">
-            <div class="info-label"><span class="info-icon" aria-hidden="true">📍</span>Location</div>
-            <div class="info-value">San Francisco, Talibon, Bohol, Philippines</div>
-          </div>
-          <div class="info-item status-item" role="listitem">
-            <div class="info-label"><span class="info-icon status-icon" aria-hidden="true">✔️</span>Status</div>
-            <div class="info-value status">Open to Opportunities</div>
-          </div>
-        </div>
+   <!-- About -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <h2 id="about-heading" class="sr-only">About Me</h2> <!-- Gi-add ang sr-only para sa screen readers -->
+    
+    <div class="hero-image-container">
+      <img src="image/jane_1.jpg" alt="Ara Jane Arong - Frontend Developer" class="hero-image">
+    </div>
+
+    <!-- GI-UPDATE: Gi-center ug gidugangan og icon -->
+    <h3 class="compact-heading about-title">
+      <span aria-hidden="true"></span> A passionate Computer Science Student
+    </h3>
+    <p>Hi, ako si Ara Jane Arong — frontend developer nga mahilig sa paghimo og limpyo, responsive, ug accessible
+      nga web interfaces. Naka-experience ko sa HTML, CSS, JavaScript, ug React. Nagtrabaho ko sa mga projects sama
+      sa portfolio sites, internal tools, ug asset management systems. Mahigugmaon ko sa pag-optimize sa performance
+      ug pagpaayo sa user experience. Open ko sa collaborations — kontaka ko pinaagi sa email o LinkedIn.</p>
+
+    <div class="info-grid" role="list" aria-label="Personal details">
+      <div class="info-item location-item" role="listitem">
+        <div class="info-label"><span class="info-icon" aria-hidden="true">📍</span>Location</div>
+        <div class="info-value">San Francisco, Talibon, Bohol, Philippines</div>
       </div>
-      <div class="education-section">
-        <h3 class="compact-heading"><span class="education-icon" aria-hidden="true">🎓</span>Education</h3>
-        <div class="education-list" aria-label="Education history">
-          <article class="education-item">
-            <div class="education-year">2013 - 2014</div>
-            <h4>Elementary</h4>
-            <ul class="education-points">
-              <li>Graduated at San Francisco Talibon, Bohol.</li>
-            </ul>
-          </article>
-          <article class="education-item">
-            <div class="education-year">2020 - 2021</div>
-            <h4>High School / K to 12</h4>
-            <ul class="education-points">
-              <li>Graduated at San Jose National High School.</li>
-            </ul>
-          </article>
-          <article class="education-item">
-            <div class="education-year">2023 - 2024</div>
-            <h4>College</h4>
-            <ul class="education-points">
-              <li>Bohol Island State University of Bilar Campus.</li>
-              <li>Bachelor of Science in Computer Science.</li>
-            </ul>
-          </article>
-        </div>
+      <div class="info-item status-item" role="listitem">
+        <div class="info-label"><span class="info-icon status-icon" aria-hidden="true">✔️</span>Status</div>
+        <div class="info-value status">Open to Opportunities</div>
       </div>
-    </section>
+    </div>
+  </div>
+
+  <div class="education-section">
+    <h3 class="compact-heading education-title">
+      <span aria-hidden="true">🎓</span> Education
+    </h3>
+    <div class="education-list" aria-label="Education history">
+      <article class="education-item">
+        <h4>College</h4>
+        <ul class="education-points">
+          <li>Bohol Island State University - Bilar Campus</li>
+          <li>Bachelor of Science in Computer Science</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
 
     <!-- Experience -->
-    <section id="experience" aria-labelledby="experience-heading">
-      <div class="container">
-        <h2 id="experience-heading">Work Experience</h2>
-        <div class="card-grid" role="list">
-          <article class="card" role="listitem">
-            <div class="card-meta">
-              <span class="badge">Project</span>
-              <span class="badge">2024-2025 Present</span>
-            </div>
-            <h3>Real Estate Management System</h3>
-            <p class="compact-meta">School Project</p>
-            <p>Built a PHP-Based Library and Real Estate Management system as a school project, applying basic database
-              and web development skills.</p>
+<section id="experience" aria-labelledby="experience-heading">
+  <div class="container">
+    <h2 id="experience-heading">Work Experience</h2>
 
-            <!-- Icons added here -->
-            <div class="tech-tags">
-              <span class="tag tag-with-icon">
-                <i class="fas fa-building"></i> Real Estate
-              </span>
-              <span class="tag tag-with-icon">
-                <i class="fas fa-book"></i> Library
-              </span>
-              <span class="tag">PHP</span>
-              <span class="tag">MySQL</span>
-            </div>
-          </article>
+    <div class="timeline">
 
-          <article class="card" role="listitem">
-            <div class="card-meta">
-              <span class="badge">Documentator</span>
-              <span class="badge">2023-2024 Present</span>
-            </div>
-            <h3>eBayBayMo</h3>
-            <p class="compact-meta">Community App</p>
-            <p>I assisted in the development of eBayBay Mo, a community-driven application that uses technology to
-              promote and preserve the Baybayin script. The platform provides Baybayin translation tools and connects
-              tattoo artists, designers, scholars, and enthusiasts, making the rich heritage of the Filipino writing
-              system more accessible and engaging for modern audiences.</p>
-
-            <div class="tech-tags">
-              <span class="tag tag-with-icon">
-                <i class="fas fa-language"></i> Baybayin
-              </span>
-              <span class="tag tag-with-icon">
-                <i class="fas fa-users"></i> Community
-              </span>
-            </div>
-          </article>
+      <!-- Experience 1: Real Estate -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024-2025 Present</span>
+          <h3>Real Estate Management System</h3>
+          <h4>Project · School Project</h4>
+          <p>Built a PHP-Based Library and Real Estate Management system as a school project, applying basic database
+            and web development skills.</p>
+          <div class="tech-tags">
+            <span class="tag tag-with-icon">
+              <i class="fas fa-building"></i> Real Estate
+            </span>
+            <span class="tag tag-with-icon">
+              <i class="fas fa-book"></i> Library
+            </span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="skills" aria-labelledby="skills-heading">
-      <div class="container">
-        <h2 id="skills-heading">Skills</h2>
+      <!-- Experience 2: eBayBayMo -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2023 - 2024</span>
+          <h3>eBayBayMo</h3>
+          <h4>Documentator - Community App</h4>
+          <p>Assisted in the development of eBayBayMo, a community-driven app that uses technology to bring Baybayin 
+            characters to life. The platform provides translation tools and connects tattoo artists, t-shirt designers, 
+            scholars, and enthusiasts with the rich heritage of the Filipino script.</p>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 3: BERA -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024 - 2025 Present</span>
+          <h3>BERA</h3>
+          <h4>Lead Programming - Emergency Response App</h4>
+          <p>BERA is Bilar's emergency response app that connects residents to police, fire, medical, and rescue services 
+            through a simple emergency button and real-time request tracking system.</p>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 4: CSO-System (Newly Added) -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025 - 2026</span>
+          <h3>CSO-System</h3>
+          <h4>Documentor - Campus Platform</h4>
+          <p>Developed CSO-System, BISU-Bilar's unified digital hub that empowers student leaders to easily manage 
+            organizations, plan events, track members, and allocate resources. The platform is designed to strengthen 
+            campus student communities through seamless digital coordination.</p>
+          <div class="tech-tags">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section id="skills" class="skills" aria-labelledby="skills-heading">
+  <div class="container">
+    <h2 id="skills-heading">Skills</h2>
 
         <div class="skills-grid">
 
@@ -295,6 +324,98 @@
       </div>
     </section>
 
+   <!-- Certificates -->
+<section id="certificates" aria-labelledby="certificates-heading">
+  <div class="container">
+    <h2 id="certificates-heading">Certificates</h2>
+
+    <div class="card-grid" role="list">
+
+      <!-- Certificate 1: Zionlab Session 2 -->
+      <article class="card" role="listitem">
+        <div class="project-image-row" aria-label="Zionlab Session 2 Certificate">
+          <img class="thumb" src="image/certificate.jpg" alt="Zionlab Session 2 Certificate">
+          <div class="extra-images">
+            <!-- Add more images if you have them -->
+          </div>
+          <button class="view-more-btn" type="button" aria-label="View certificate"></button>
+        </div>
+        <h3>How to Find a Problem Worth Solving</h3>
+        <p class="project-summary">Part of the webinar series "THINK BEFORE YOU BUILD: AI Assists. Humans Still Decide." 
+          Recognizes commitment to identifying meaningful and research-worthy problems that can lead to impactful thesis 
+          and capstone projects.</p>
+        <div class="tech-tags" aria-label="Certificate details">
+          <span class="tag">Zionlab Digital</span>
+          <span class="tag">Webinar</span>
+        </div>
+        <div class="certificate-date">Issued: June 15, 2026</div>
+      </article>
+
+      <!-- Certificate 2: Zionlab Session 1 -->
+      <article class="card" role="listitem">
+        <div class="project-image-row" aria-label="Zionlab Session 1 Certificate">
+          <img class="thumb" src="image/certificate_1.jpg" alt="Zionlab Session 1 Certificate">
+          <div class="extra-images">
+            <!-- Add more images if you have them -->
+          </div>
+          <button class="view-more-btn" type="button" aria-label="View certificate"></button>
+        </div>
+        <h3>Why Most Thesis Groups Get Stuck</h3>
+        <p class="project-summary">Part of the webinar series "THINK BEFORE YOU BUILD: AI Assists. Humans Still Decide." 
+          Recognizes commitment to understanding common challenges in thesis and capstone development and exploring 
+          strategies for overcoming them.</p>
+        <div class="tech-tags" aria-label="Certificate details">
+          <span class="tag">Zionlab Digital</span>
+          <span class="tag">Webinar</span>
+        </div>
+        <div class="certificate-date">Issued: June 12, 2026</div>
+      </article>
+
+      <!-- Certificate 3: C++ Algorithms -->
+      <article class="card" role="listitem">
+        <div class="project-image-row" aria-label="C++ Algorithms Certificate">
+          <img class="thumb" src="image/certificate-cpp-algo.jpg" alt="C++ Algorithms and Complexity Certificate">
+          <div class="extra-images">
+            <!-- Add more images if you have them -->
+          </div>
+          <button class="view-more-btn" type="button" aria-label="View certificate"></button>
+        </div>
+        <h3>C++ Algorithms and Complexity</h3>
+        <p class="project-summary">Completed in BSCS 3, CS 311 - Algorithms and Complexity, Term 1, S.Y. 25-26. 
+          Demonstrated proficiency in algorithm design, analysis, and complexity theory with a total score of 370/570.</p>
+        <div class="tech-tags" aria-label="Certificate details">
+          <span class="tag">CodeChum</span>
+          <span class="tag">C++</span>
+          <span class="tag">Algorithms</span>
+        </div>
+        <div class="certificate-date">Issued: May 30, 2026</div>
+      </article>
+
+      <!-- Certificate 4: Basic Web Development -->
+      <article class="card" role="listitem">
+        <div class="project-image-row" aria-label="Web Development Certificate">
+          <img class="thumb" src="image/certificate-basic-web-dev.jpg.jpg" alt="Basic Web Development Certificate">
+          <div class="extra-images">
+            <!-- Add more images if you have them -->
+          </div>
+          <button class="view-more-btn" type="button" aria-label="View certificate"></button>
+        </div>
+        <h3>Basic Web Development</h3>
+        <p class="project-summary">Completed in BSCS-3-CS-323-T-2-S-Y-25-26. Demonstrated foundational skills in web 
+          development including HTML, CSS, and JavaScript with a total score of 1467/1750.</p>
+        <div class="tech-tags" aria-label="Certificate details">
+          <span class="tag">CodeChum</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <div class="certificate-date">Issued: March 30, 2026</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
     <!-- Projects -->
     <section id="projects" aria-labelledby="projects-heading">
       <div class="container">
@@ -312,15 +433,14 @@
                 <img src="Project Real Estate _4.png" alt="Real Estate project screenshot 4">
                 <img src="Project Real Estate _5.png" alt="Real Estate project screenshot 5">
               </div>
+              
               <button class="view-more-btn" type="button" aria-label="View more images"></button>
             </div>
+            <h3>Real Estate</h3>
             <p class="project-summary">This Arong Real Properties makes it easy for buyers to browse and find their
               perfect home or investment property.</p>
             <div class="tech-tags" aria-label="Technologies used">
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span
-                class="tag">React</span>
             </div>
-            <div class="project-category">Real Estate</div>
           </article>
 
           <!-- Project 2: CSO -->
@@ -336,14 +456,12 @@
               </div>
               <button class="view-more-btn" type="button" aria-label="View more images"></button>
             </div>
+            <h3>CSO-SYSTEM</h3>
             <p class="project-summary">CSO-System is BISU-Bilar's unified digital hub that empowers student leaders to
               easily manage organizations, plan events, track members, and allocate resources—all in one platform
               designed to strengthen campus student communities.</p>
             <div class="tech-tags" aria-label="Technologies used">
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span
-                class="tag">React</span>
             </div>
-            <div class="project-category">CSO-SYSTEM</div>
           </article>
 
           <!-- Project 3: BERA -->
@@ -355,13 +473,11 @@
               </div>
               <button class="view-more-btn" type="button" aria-label="View more images"></button>
             </div>
+            <h3>BERA</h3>
             <p class="project-summary">BERA is Bilar's emergency response app that connects residents to police, fire,
               medical, and rescue services through a simple emergency button and real-time request tracking system.</p>
             <div class="tech-tags" aria-label="Technologies used">
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span
-                class="tag">React</span>
             </div>
-            <div class="project-category">BERA</div>
           </article>
 
           <!-- Project 4: Library -->
@@ -380,10 +496,7 @@
             <p class="project-summary">School library system with book search, borrow/return form, and inventory
               display.</p>
             <div class="tech-tags" aria-label="Technologies used">
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span
-                class="tag">PHP</span><span class="tag">MySQL</span>
             </div>
-            <div class="project-category">Library</div>
           </article>
 
           <!-- Project 5: EbaybayMo -->
@@ -401,10 +514,7 @@
               connecting tattoo artists, t-shirt designers, scholars, and enthusiasts with the rich heritage of the
               Filipino script.</p>
             <div class="tech-tags" aria-label="Technologies used">
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span
-                class="tag">PHP</span><span class="tag">MySQL</span>
             </div>
-            <div class="project-category">EbaybayMo</div>
           </article>
 
         </div>
