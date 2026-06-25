@@ -1,4 +1,3 @@
-// Mobile Menu Toggle
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
@@ -8,7 +7,6 @@ if (menuBtn && navLinks) {
   });
 }
 
-// Close menu kapag nag-click sa link
 const navLinkElements = document.querySelectorAll('.nav-links a');
 if (navLinkElements.length) {
   navLinkElements.forEach(link => {
@@ -16,7 +14,6 @@ if (navLinkElements.length) {
   });
 }
 
-// Smooth Scroll (optional kung naka-CSS `scroll-behavior: smooth` ka na)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
@@ -30,7 +27,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Contact Form Handler (Frontend only)
 const form = document.getElementById('contact-form');
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -45,7 +41,6 @@ if (form) {
   });
 }
 
-// Reveal on scroll animations
 window.addEventListener('DOMContentLoaded', () => {
   const revealTargets = document.querySelectorAll(
     'section, #home-heading, .hero-image-container, .hero-actions, .info-grid, .education-list, .card, .skill-item, .contact-layout'
@@ -67,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ===== 1. AUTO-HIDE "VIEW MORE" BUTTON IF NO EXTRA IMAGES ===== */
+  /* AUTO-HIDE "VIEW MORE" BUTTON IF NO EXTRA IMAGES  */
   document.querySelectorAll('.project-image-row').forEach(row => {
     const extras = row.querySelector('.extra-images');
     const btn    = row.querySelector('.view-more-btn');
@@ -77,14 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ===== 2. VIEW MORE / SHOW LESS TOGGLE ===== */
   document.querySelectorAll('.view-more-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      e.stopPropagation(); // prevent lightbox from opening
+      e.stopPropagation();
       const row = btn.closest('.project-image-row');
       row.classList.toggle('expanded');
 
-      // Smooth scroll para makita ang gallery
       if (row.classList.contains('expanded')) {
         setTimeout(() => {
           row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -93,40 +86,78 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ===== 3. LIGHTBOX FUNCTIONALITY ===== */
   const lightbox    = document.getElementById('lightbox');
   const lightboxImg = lightbox.querySelector('img');
   const closeBtn    = lightbox.querySelector('.lightbox-close');
 
-  // Open lightbox when ANY image inside .project-image-row is clicked
   document.querySelectorAll('.project-image-row img').forEach(img => {
     img.addEventListener('click', () => {
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
       lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden'; // lock scroll
+      document.body.style.overflow = 'hidden';
     });
   });
 
-  // Close lightbox function
   const closeLightbox = () => {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
-    lightboxImg.src = ''; // clear image
+    lightboxImg.src = '';
   };
 
-  // Close button click
   closeBtn.addEventListener('click', closeLightbox);
 
-  // Click on backdrop (outside image) to close
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  // Press ESC to close
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();
     }
+  });
+});
+
+document.querySelectorAll('.view-more-btn').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const imageRow = this.closest('.project-image-row');
+    imageRow.classList.toggle('expanded');
+  });
+});
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+document.querySelectorAll('.project-image-row img').forEach(img => {
+  img.addEventListener('click', function() {
+    lightboxImg.src = this.src;
+    lightboxImg.alt = this.alt;
+    lightbox.classList.add('active');
+  });
+});
+
+lightboxClose.addEventListener('click', function() {
+  lightbox.classList.remove('active');
+});
+
+lightbox.addEventListener('click', function(e) {
+  if (e.target === lightbox) {
+    lightbox.classList.remove('active');
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+    lightbox.classList.remove('active');
+  }
+});
+
+document.querySelectorAll('.view-more-btn').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const imageRow = this.closest('.project-image-row');
+    imageRow.classList.toggle('expanded');
   });
 });
