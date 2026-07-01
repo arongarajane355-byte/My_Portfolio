@@ -294,7 +294,7 @@ p {
 
 .nav-links a {
   position: relative;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy smooth transition */
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy smooth */
 }
 
 .nav-links a:hover {
@@ -470,7 +470,7 @@ p {
   animation: shineText 3s linear infinite;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* Standard mask para walay warning */
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   z-index: -1;
   pointer-events: none;
