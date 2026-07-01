@@ -72,7 +72,7 @@ if (form) {
 
 window.addEventListener('DOMContentLoaded', () => {
   const revealTargets = document.querySelectorAll(
-    'section, #home-heading, .hero-image-container, .hero-actions, .info-grid, .education-list, .card, .skill-item, .contact-layout'
+    '#home-heading, h2#about-heading, .hero-image-container, .hero-actions, .info-item, .education-section, .education-list .education-item, .skills-acquired, .skill-category'
   );
 
   revealTargets.forEach((el) => el.classList.add('reveal'));
