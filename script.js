@@ -29,14 +29,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const form = document.getElementById('contact-form');
 if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email')?.value.trim();
-    const message = document.getElementById('message')?.value.trim();
+  // create or reuse a message container shown after form submission
+  let msgContainer = document.querySelector('.form-message');
+  if (!msgContainer) {
+    msgContainer = document.createElement('div');
+    msgContainer.className = 'form-message';
+    form.parentNode.insertBefore(msgContainer, form.nextSibling);
+  }
 
-    if (email && message) {
-      alert('Salamat! Na-receive ko ang message mo. (Demo lang ito)');
-      form.reset();
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msgContainer.textContent = '';
+    msgContainer.classList.remove('success', 'error');
+
+    const formData = new FormData(form);
+    const action = form.getAttribute('action') || window.location.href;
+
+    try {
+      const res = await fetch(action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+
+      if (res.ok) {
+        msgContainer.textContent = 'Your message is sent successfully! I will get back to you soon.';
+        msgContainer.classList.add('success');
+        form.reset();
+      } else {
+        // try to read JSON error message from Formspree
+        let data;
+        try { data = await res.json(); } catch (_) { data = null; }
+        msgContainer.textContent = (data && data.error) ? data.error : 'Oops — there was a problem sending your message.';
+        msgContainer.classList.add('error');
+      }
+    } catch (err) {
+      msgContainer.textContent = 'Network error. Please try again later.';
+      msgContainer.classList.add('error');
     }
   });
 }
@@ -65,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* AUTO-HIDE "VIEW MORE" BUTTON IF NO EXTRA IMAGES  */
   document.querySelectorAll('.project-image-row').forEach(row => {
     const extras = row.querySelector('.extra-images');
-    const btn    = row.querySelector('.view-more-btn');
+    const btn = row.querySelector('.view-more-btn');
 
     if (!extras || extras.children.length === 0) {
       if (btn) btn.style.display = 'none';
@@ -86,9 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const lightbox    = document.getElementById('lightbox');
+  const lightbox = document.getElementById('lightbox');
   const lightboxImg = lightbox.querySelector('img');
-  const closeBtn    = lightbox.querySelector('.lightbox-close');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
 
   document.querySelectorAll('.project-image-row img').forEach(img => {
     img.addEventListener('click', () => {
@@ -119,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.querySelectorAll('.view-more-btn').forEach(button => {
-  button.addEventListener('click', function(e) {
+  button.addEventListener('click', function (e) {
     e.stopPropagation();
     const imageRow = this.closest('.project-image-row');
     imageRow.classList.toggle('expanded');
@@ -131,31 +160,31 @@ const lightboxImg = lightbox.querySelector('img');
 const lightboxClose = lightbox.querySelector('.lightbox-close');
 
 document.querySelectorAll('.project-image-row img').forEach(img => {
-  img.addEventListener('click', function() {
+  img.addEventListener('click', function () {
     lightboxImg.src = this.src;
     lightboxImg.alt = this.alt;
     lightbox.classList.add('active');
   });
 });
 
-lightboxClose.addEventListener('click', function() {
+lightboxClose.addEventListener('click', function () {
   lightbox.classList.remove('active');
 });
 
-lightbox.addEventListener('click', function(e) {
+lightbox.addEventListener('click', function (e) {
   if (e.target === lightbox) {
     lightbox.classList.remove('active');
   }
 });
 
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && lightbox.classList.contains('active')) {
     lightbox.classList.remove('active');
   }
 });
 
 document.querySelectorAll('.view-more-btn').forEach(button => {
-  button.addEventListener('click', function(e) {
+  button.addEventListener('click', function (e) {
     e.stopPropagation();
     const imageRow = this.closest('.project-image-row');
     imageRow.classList.toggle('expanded');
